@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+/* Tailwind Component Section */
+@layer components {
+    .container {
+        @apply phone:px-8 tablet:px-12 px-20 !max-w-[75rem] mx-auto;
+    }
+
+    .abs-container {
+        @apply  phone:w-[calc(100%-4rem)] !max-w-[calc(77rem-10rem)] mx-auto;
+    }
+
+    .text-unfill {
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        -ms-text-fill-color: transparent;
+    }
+
+    .text-fill {
+        -webkit-text-fill-color: initial;
+        -moz-text-fill-color: initial;
+        -ms-text-fill-color: initial;
+    }
+
+    .cs-gradient {
+        @apply from-accent-200 to-accent-400;
+    }
+
+    .cs-gradient-3 {
+        @apply from-accent-100 to-accent-400;
+    }
+
+    .cs-gradient-2 {
+        @apply from-accent-600 to-primary-400;
+    }
+
+    .margin-border {
+        @apply border-cs-dark border-dashed border-opacity-20;
+    }
+
+    .header-title {
+        @apply type-head-1 font-black;
+    }
+
+    .header-text {
+        @apply type-body-lg;
+    }
+
+    .section-heading {
+        @apply type-head-2 font-black;
+    }
+
+    .section-subheading {
+        @apply type-body-lg;
+    }
+
+    .reverse-container {
+        @apply max-w-[100rem] mx-auto;
+    }
+
+    .brand {
+        @apply font-bold;
+    }
+
+    .skeleton {
+        @apply animate-skeleton;
+    }
+
+    main {
+        @apply min-h-screen overflow-hidden;
+    }
+
+    .btn {
+        @apply select-none transition-all duration-200 px-4 py-2 rounded-sm;
+    }
+
+    .type-head-5 {
+        @apply text-xl phone:text-lg;
+    }
+
+    .type-head-4 {
+        @apply text-2xl phone:text-xl;
+    }
+
+    .type-head-3 {
+        @apply text-3xl phone:text-2xl;
+    }
+
+    .type-head-2 {
+        @apply text-4xl phone:text-3xl;
+    }
+
+    .type-head-1 {
+        @apply text-5xl phone:text-4xl;
+    }
+
+    .type-body-base {
+        @apply text-base phone:text-sm;
+    }
+    .type-body-sm {
+        @apply text-sm phone:text-xs;
+    }
+    .type-body-lg {
+        @apply text-lg phone:text-base;
+    }
+}
+
+/* Tailwind Normal CSS */
+body {
+    @apply p-0 m-0 min-h-screen overflow-x-hidden bg-white scroll-p-20;
+}
+
+main > * {
+    @apply w-full;
+}
+
+.slide:not(.no-slide) {
+    opacity: 0;
+    transition: all 0.3s ease, transform 1s ease, opacity 1s ease;
+}
+
+*:has(> .container) {
+    @apply w-full;
+}
+
+.slide.slide-left {
+    transform: translateX(4rem);
+}
+.slide.slide-right {
+    transform: translateX(-4rem);
+}
+.slide.slide-up {
+    transform: translateY(4rem);
+}
+.slide.slide-down {
+    transform: translateY(-4rem);
+}
+
+.slide.i\:open {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Normal CSS */
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+/* Flip Card */
+.flip-card {
+    perspective: 1000px;
+}
+  
+.flip-card-inner {
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+@media (min-width: 768px) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateX(180deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .flip-card.f-open .flip-card-inner {
+        transform: rotateX(180deg);
+    }
+}
+
+.flip-card-front, .flip-card-back {
+    backface-visibility: hidden;
+    margin-top: 10px
+}
+  
+.flip-card-back {
+    transform: rotateX(180deg);
+}
+
+.left-border{
+    border-left: 3px dashed rgba(255, 255, 255, 0.2);
+    margin-bottom: -14px;
+}
+
+.yellow-border{
+    border-left: 7px solid #FBAE3C;
+    padding-left: 15px;
+    margin-left: -24px;
+}
+
+/* milestone */
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+    .swiper {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .swiper-slide {
+      width: 100%;
+    }
+  }
+@media screen and (max-width: 768px) {
+  .title1 {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top : -25px;
+  }
+  .year1 {
+    font-size: 14px;
+  }
+  .description1 {
+    font-size: 10px;
+    margin-top: -40px;
+    line-height: 1.2;
+  }
+
+  .year2{
+    font-size: 14px;
+    margin-top : 15px;
+  }
+
+  .title2{
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top : -35px;
+  }
+
+  .description2{
+    font-size: 10px;
+    margin-top: -75px;
+    line-height: 1.2;
+  }
+}
