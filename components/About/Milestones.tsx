@@ -143,8 +143,8 @@ export default function Milestones({
                 src={imgSrc1}
                 loading="lazy"
                 alt=""
-                className="rounded-md brightness-75 phone:w-full group-odd/checklist:mr-auto group-even/checklist:ml-auto shadow-xl w-auto h-full overflow-hidden object-cover object-center  w-auto object-contain "
-                style={{ borderRadius: '20px', objectFit: 'cover' }}
+                className="rounded-md brightness-75 shadow-xl h-full phone:h-[200px]"
+                style={{ borderRadius: '12px', objectFit: 'cover' }}
               />
               <div
                 className="overlay"
@@ -154,8 +154,8 @@ export default function Milestones({
                   left: 0,
                   width: '100%',
                   height: '100%',
-                  backgroundColor: 'rgba(251, 174, 60, 0.9)',
-                  borderRadius: '20px',
+                  backgroundColor: 'rgba(41, 158, 224, 0.9)',
+                  borderRadius: '12px',
                   zIndex: 1,
                 }}
               ></div>
@@ -197,14 +197,15 @@ export default function Milestones({
           </Skeleton>
         </div>
 		
-		<div className="relative">
+		{/* <div className="relative">
           <Skeleton variant="rounded" className="w-full h-full phone:aspect-video">
             <div style={{ position: 'relative' }}>
               <Image
                 src={imgSrc2}
                 loading="lazy"
                 alt=""
-                className="rounded-md brightness-75 phone:w-full group-odd/checklist:mr-auto group-even/checklist:ml-auto shadow-xl w-auto h-full overflow-hidden object-cover object-center  w-auto object-contain "
+                className="rounded-md brightness-75 shadow-xl h-full  "
+                // className="rounded-md brightness-75 phone:w-full group-odd/checklist:mr-auto group-even/checklist:ml-auto shadow-xl w-auto h-full overflow-hidden object-cover object-center  w-auto object-contain "
 				style={{ borderRadius: '20px', objectFit: 'cover' }}
               />
               <div
@@ -215,7 +216,7 @@ export default function Milestones({
                   left: 0,
                   width: '100%',
                   height: '100%',
-                  backgroundColor: 'rgba(220, 0, 50, 0.9)',
+                  backgroundColor: 'rgba(255, 161, 0, 0.9)',
                   borderRadius: '20px',
                   zIndex: 1,
                 }}
@@ -256,16 +257,19 @@ export default function Milestones({
               </div>
             </div>
           </Skeleton>
-        </div>
+        </div> */}
+
+        
 		<div className="relative">
           <Skeleton variant="rounded" className="w-full h-full phone:aspect-video">
             <div style={{ position: 'relative' }}>
               <Image
-                src={imgSrc3}
+                src={imgSrc2}
                 loading="lazy"
                 alt=""
-                className="rounded-md brightness-75 phone:w-full group-odd/checklist:mr-auto group-even/checklist:ml-auto shadow-xl w-auto h-full overflow-hidden object-cover object-center  w-auto object-contain "
-                style={{ borderRadius: '20px', objectFit: 'cover' }}
+                className="rounded-md brightness-75 shadow-xl h-full  phone:h-[200px]"
+                // className="rounded-md brightness-75 phone:w-full group-odd/checklist:mr-auto group-even/checklist:ml-auto shadow-xl w-auto h-full overflow-hidden object-cover object-center  w-auto object-contain "
+                style={{ borderRadius: '12px', objectFit: 'cover' }}
               />
               <div
                 className="overlay"
@@ -275,8 +279,70 @@ export default function Milestones({
                   left: 0,
                   width: '100%',
                   height: '100%',
-                  backgroundColor: 'rgba(10, 37, 64, 0.9)',
-                  borderRadius: '20px',
+                  backgroundColor: 'rgba(255, 161, 0, 0.9)',
+                  borderRadius: '12px',
+                  zIndex: 1,
+                }}
+              ></div>
+              <div
+                className={`year1 type-head-5 font-bold text-[#FFFFFF]`}
+                style={{
+                  position: 'absolute',
+                  top: 'calc(55% - 4rem)',
+                  left: '2%',
+                  zIndex: 2,
+                }}
+              >
+                {year2}
+              </div>
+              <div
+                className={`title1 type-head-1 font-bold text-[#FFFFFF]`}
+                style={{
+                  position: 'absolute',
+                  top: '60%',
+                  left: '2%',
+                  transform: 'translate(0, -50%)',
+                  zIndex: 2,
+                }}
+              >
+                {title2}
+              </div>
+              <div
+                className={`description1 phone:text-base text-lg text-[#FFFFFF]`}
+                style={{
+                  position: 'absolute',
+                  top: 'calc(65% + 2rem)',
+                  left: '2%',
+                  zIndex: 2,
+                }}
+              >
+                {description2}
+              </div>
+            </div>
+          </Skeleton>
+        </div>
+
+		<div className="relative">
+          <Skeleton variant="rounded" className="w-full h-full phone:aspect-video ">
+            <div style={{ position: 'relative' }}>
+              <Image
+                src={imgSrc3}
+                loading="lazy"
+                alt=""
+                className="rounded-md brightness-75 shadow-xl h-full phone:h-[200px] "
+                // className="rounded-md brightness-75 phone:w-full group-odd/checklist:mr-auto group-even/checklist:ml-auto shadow-xl w-auto h-full overflow-hidden object-cover object-center  w-auto object-contain "
+                style={{ borderRadius: '12px', objectFit: 'cover' }}
+              />
+              <div
+                className="overlay"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  backgroundColor: 'rgba(0, 58, 159, 0.9)',
+                  borderRadius: '12px',
                   zIndex: 1,
                 }}
               ></div>

@@ -1,0 +1,20 @@
+import V1 from "@/public/assets/about/value01.svg";
+import V2 from "@/public/assets/about/value02.svg";
+import V3 from "@/public/assets/about/value03.svg";
+import V4 from "@/public/assets/about/value04.svg";
+import V5 from "@/public/assets/about/value05.svg";
+import V6 from "@/public/assets/about/value06.svg";
+import BG02 from "@/public/assets/about/BG02.svg";
+import BG03 from "@/public/assets/about/BG03.svg";
+import BG04 from "@/public/assets/about/BG04.svg";
+import BG05 from "@/public/assets/about/BG05.svg";
+import BG06 from "@/public/assets/about/BG06.svg";
+import BG07 from "@/public/assets/about/BG07.svg";
+import checkB from "@/public/assets/case-study/checklist.svg";
+import checkBD from "@/public/assets/case-study/checklist-dark-blue.svg";
+import checkP from "@/public/assets/case-study/checklist-purple.svg";
+import keyP1 from "@/public/assets/case-study/keyP.svg";
+import keyP2 from "@/public/assets/case-study/keyP2.svg";
+import keyP3 from "@/public/assets/case-study/keyP3.svg";
+
+export { V1, V2, V3, V4, V5, V6, BG02, BG03, BG04, BG05, BG06, BG07, checkB, keyP1, keyP2, keyP3, checkBD, checkP};

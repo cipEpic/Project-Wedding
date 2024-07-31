@@ -9,5 +9,6 @@ import BG03 from "@/public/assets/about/BG03.svg";
 import BG04 from "@/public/assets/about/BG04.svg";
 import BG05 from "@/public/assets/about/BG05.svg";
 import BG06 from "@/public/assets/about/BG06.svg";
+import BG07 from "@/public/assets/about/BG07.svg";
 
-export { V1, V2, V3, V4, V5, V6, BG02, BG03, BG04, BG05, BG06};
+export { V1, V2, V3, V4, V5, V6, BG02, BG03, BG04, BG05, BG06, BG07};

@@ -4,7 +4,7 @@ import Image from "next/image";
 import vectorVision from "@/public/assets/about/vectorVision.svg";
 import vectorMission from "@/public/assets/about/vectorMission.svg";
 import quote from "@/public/assets/about/quote.svg";
-import { V1, V2, V3, V4, V5, V6, BG02, BG03, BG04, BG05, BG06 } from "@/components/About/SVG";
+import { V1, V2, V3, V4, V5, V6, BG02, BG03, BG04, BG05, BG06, BG07 } from "@/components/About/SVG";
 import Milestones01 from "@/public/assets/about/Milestones01.jpg";
 import Milestones02 from "@/public/assets/about/Milestones02.jpg";
 import Milestones03 from "@/public/assets/about/Milestones03.jpg";
@@ -15,6 +15,8 @@ import Ptr04 from "@/public/assets/about/ptr04.png";
 import Ptr05 from "@/public/assets/about/ptr05.png";
 import Ptr06 from "@/public/assets/about/ptr06.png";
 import Ptr07 from "@/public/assets/about/ptr07.png";
+import BG08 from "@/public/assets/about/BG05(1).png";
+import BG09 from "@/public/assets/about/BG07(1).png";
 import Blobs from "@/components/About/Blobs";
 
 //Components
@@ -23,9 +25,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import Section from "@/components/Section";
+import Section1 from "@/components/Section1";
 import Button from "@/components/Button";
 import ValueCard from "@/components/About/ValueCard";
 import VMCard from "@/components/About/VMCard";
+import MCard from "@/components/About/MCard";
 import FAQList from "@/components/About/FAQList";
 import Milestones from "@/components/About/Milestones";
 import Proven from "@/components/About/Proven";
@@ -47,28 +51,29 @@ export default function About() {
                 <Navbar />
                 <main>
                     {/* Hero Section */}
-                    <div data-cy="hero" id="hero" className="relative py-12">
-                        <Section className="relative h-auto flex items-center z-10 overflow-y-hidden shadow-lg">
+                    <div data-cy="header" id="header" className="relative min-h-screen flex pb-12 z-10">
+                        <Section className="relative h-auto flex items-center z-10 overflow-y-hidden shadow-lg1">
+                            <div className="hero__image absolute w-[100%] h-[100%] right-0 top-0 bottom-0 z-[-1] object-cover">
+                                {/* <Image src={BG07} alt="" loading="lazy" data-cy="hero-background" className="w-[100%] h-full object-cover phone:mr-auto" /> */}
+
+                                <Image src={BG09} alt="" loading="lazy" data-cy="hero-background" className="w-full h-full object-cover phone:object-center phone:object-center"
+                                    style={{ objectPosition: '80% center' }} />
+                            </div>
+                            <div className="overlay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: `linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15))`, zIndex: -1 }}></div>
                             <div className="flex w-full">
-                                <div className="relative h-[90%] pt-[70px] pb-[130px] isolate flex items-center tablet:pt-[0px] tablet:pb-[0px] phone:flex-col phone:gap-6">
+                                <div className="relative h-[90%]   isolate flex items-center  tablet:pt-[0px] tablet:pb-[0px] phone:flex-col phone:gap-6">
                                     <div className="content w-[53%] flex flex-col justify-center gap-[15px] phone:w-full phone:gap-[10px]">
                                         <div className="text flex flex-col">
-                                            <h1 className="type-head-1 font-extrabold slide slide-up text-cs-dark">
+                                            <h1 className="type-head-1 font-extrabold text-cs-dark phone:text-center" style={{ color: "#FFFFFF" }}>
                                                 About <span style={{ color: "#DC0032" }}>Plotigo</span>
                                             </h1>
                                         </div>
 
-                                        <div className="type-head-5 text__group flex flex-col gap-3 mt-2 ml-1">
-                                            <p className="content slide slide-up">Plotigo is the technological arm of Woodlands Transport that focuses on delivering innovative digital solutions to businesses and individuals.</p>
+                                        <div className="type-head-5 text__group flex flex-col gap-3 mt-2 ml-1 phone:text-center" style={{ color: "#FFFFFF" }}>
+                                            <p className="content">Plotigo is the technological arm of Woodlands Transport that focuses on delivering innovative digital solutions to businesses and individuals.</p>
                                         </div>
                                     </div>
 
-
-                                    <div className="relative isolate flex items-center tablet:pt-[0px] tablet:pb-[0px] phone:flex-col phone:gap-12">
-                                        <div className="content slide slide-up w-[100%] flex flex-col justify-center gap-[15px] phone:w-full phone:gap-[10px]">
-                                            <Image src={BG04} alt="" loading="lazy" data-cy="hero-background" className="w-[100%] h-full object-cover" />
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </Section>
@@ -76,22 +81,22 @@ export default function About() {
 
 
                     {/* VisionMission Section */}
-                    <div data-cy="visionmission" id="visionmission" className="relative bg-white h-[auto] pb-[190px]">
-                        <Section title="Who are we?" subtitle="What would we want to be in the future?" className="relative py-[90px] z-9 isolate">
-                            <div className="content slide slide-up w-full flex flex-row gap-24 phone:flex-col tablet:gap-5 justify-center text-cs-dark">
-                                <VMCard data-vmleft imgSrc1={vectorVision} imgSrc2={quote} title="Our Vision" text="To be a leading software vendor, known for innovative solutions and trusted partnerships with clients" />
-                                <VMCard data-vmleft imgSrc1={vectorMission} imgSrc2={quote} title="Our Mission" text="To help businesses streamline operations and drive growth through innovative software solutions" />
+                    <div data-cy="visionmission" id="visionmission" className="relative bg-white h-[auto]">
+                        <Section title="Who are we?" subtitle="What would we want to be in the future?" className="relative py-[90px] z-9 isolate mb-[190px] phone:py-[10px] phone:mb-[20px]">
+                            <div className="content slide slide-up w-full flex flex-row gap-8 phone:flex-col tablet:gap-5">
+                                <VMCard data-vmleft imgSrc={vectorVision} titleV="Vision" textV="To be a leading software vendor, known for innovative solutions and trusted partnerships with clients" />
+                                <MCard data-vmleft imgSrc={vectorMission} titleM="Mission" textM="To help businesses streamline operations and drive growth through innovative software solutions" />
                             </div>
                         </Section>
                     </div>
-
+                    
                     {/* Values Section */}
                     <div data-cy="values" id="values" className="relative min-h-[25rem] pb-12 z-10">
                         <Section title="Our values" subtitle="What drives us to be a better company everyday?" className="pt-[3rem]" dark>
                             <div className="hero__image absolute w-[100%] h-[100%] right-0 top-0 bottom-0 z-[-1] object-cover">
                                 <Image src={BG03} alt="" loading="lazy" data-cy="hero-background" className="w-[100%] h-full object-cover" />
                             </div>
-                            <div className="content slide slide-up grid gap-4 tablet:gap-4 phone:grid-cols-[repeat(auto-fit,minmax(15rem,20rem))] tablet:grid-cols-2 grid-cols-3 mt-[120px] mb-[60px]">
+                            <div className="content slide slide-up grid gap-4 tablet:gap-4 phone:grid-cols-[repeat(auto-fit,minmax(15rem,20rem))] tablet:grid-cols-2 grid-cols-3 mt-[120px] mb-[60px] phone:mt-[20px] phone:mb-[-10px]">
                                 <div className="left-border">
                                     <ValueCard src={V4} alt="number" title="Innovative" text="Strive to stay ahead of the curve by creating new and exciting products." />
                                 </div>
@@ -117,8 +122,8 @@ export default function About() {
 
                     {/* Milestones Section */}
                     <div data-cy="milestones" id="milestones" className="relative bg-cs-white-200  h-[auto] overflow-hidden">
-                        <Section title="Milestone" subtitle="See our company's journey" className="py-[90px] z-10">
-                            <div className="content mt-16 flex flex-col justify-start gap-[4rem]">
+                        <Section title="Milestone" subtitle="See our company's journey" className="py-[90px] z-10 phone:py-[20px]">
+                            <div className="content mt-16 flex flex-col justify-start gap-[4rem] phone:mt-4">
                                 <Milestones
                                     imgSrc1={Milestones01}
                                     year1="2019"
@@ -139,73 +144,23 @@ export default function About() {
 
 
                     {/* Ptr Section */}
-                    <div id="proven" className="pt-12 pb-6 bg-cs-white-200" data-cy="proven">
-                        <Section title="" subtitle="" className="">
+                    <div id="proven" className="pt-12 pb-6 bg-cs-white-200 slide slide-up" data-cy="proven">
+                        <Section title="" subtitle="" className="phone:ml-[-30px]">
+                            <h2 className="type-head-5 font-bold text-[#A3A3A3] proven-heading phone:text-[16px]">Software Suit</h2>
+                            <p className="w-2/3 type-head-4 font-extrabold text-[#0A2540] proven-paragraph phone:text-[18px] phone:w-full">Rev up your Transportation Game with our full suite of Passenger, Driver, and Operator applications</p>
+                        </Section>
+                        <Section1 title="" subtitle="" className="">
                             <div data-cy="partner-list" className="wrapper flex flex-col w-[full] gap-12">
                                 <Proven title=" " src={Ptr01} />
                             </div>
-                        </Section>
+                        </Section1>
                     </div>
-
-
-                    {/* <div id="proven" className="pt-12 pb-6 bg-cs-white-200" data-cy="proven">
-                        <Section title="" subtitle="" className="">
-                            <div data-cy="partner-list" className="wrapper flex flex-col w-[full] gap-12">
-                                <ProvenSlider id="normal">
-                                    <SwiperSlide>
-                                        <Proven title=" " src={Ptr02} />
-                                    </SwiperSlide>
-
-                                    <SwiperSlide>
-                                        <Proven title=" " src={Ptr07}  />
-                                    </SwiperSlide>
-
-                                    <SwiperSlide>
-                                        <Proven title=" " src={Ptr05} />
-                                    </SwiperSlide>
-                                </ProvenSlider>
-                            </div>
-                        </Section>
-                    </div> */}
-
-
-                    {/* <div id="proven" className="pt-12 pb-6 bg-cs-white-200" data-cy="proven">
-                        <Section title="" subtitle="" className="">
-                            <div data-cy="partner-list" className="wrapper flex flex-col w-[full] gap-12">
-                                <ProvenSlider id="normal">
-                                    <SwiperSlide >
-                                        <Proven title=" " src={Ptr01} />
-                                    </SwiperSlide>
-
-                                    <SwiperSlide>
-                                        <Proven title=" " src={Ptr02} />
-                                    </SwiperSlide>
-
-                                    <SwiperSlide>
-                                        <Proven title=" " src={Ptr03}  />
-                                    </SwiperSlide>
-
-                                    <SwiperSlide>
-                                        <Proven title=" " src={Ptr06}  />
-                                    </SwiperSlide>
-
-                                    <SwiperSlide>
-                                        <Proven title=" " src={Ptr04}  />
-                                    </SwiperSlide>
-
-                                    <SwiperSlide>
-                                        <Proven title=" " src={Ptr05} />
-                                    </SwiperSlide>
-                                </ProvenSlider>
-                            </div>
-                        </Section>
-                    </div> */}
 
                     {/* FAQ Section */}
                     <div id="faq" className="py-0 z-10" data-cy="faq">
                         <Section title="Frequently Asked Questions" subtitle="Here is some question that we frequently get about our business and our company" className="relative" dark>
                             <div className="hero__image absolute w-[100%] h-[100%] right-0 top-0 bottom-0 z-[-1] object-cover">
-                                <Image src={BG05} alt="" loading="lazy" data-cy="hero-background" className="w-[100%] h-full object-cover" />
+                                <Image src={BG08} alt="" loading="lazy" data-cy="hero-background" className="w-[100%] h-full object-cover" />
                             </div>
                             <div className="overlay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: `linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15))`, zIndex: -1 }}></div>
                             <div className="wraper flex justify-between phone:flex-col-reverse items-center gap-20">
